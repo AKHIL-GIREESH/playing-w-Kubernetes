@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "myapp"
+  labels:
+    app: myapp
+    about: expressServer
+spec:
+  containers:
+    - name: myapp
+      image: exp-env-server
