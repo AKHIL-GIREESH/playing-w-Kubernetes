@@ -10,6 +10,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
+  storageClassName: local-storage # 👈 Storage is provided by the local file system or disk of the node where the pod is running. If the pod moves to another node, it loses access to the storage unless explicitly configured.
   hostPath:
     path: /Users/akhilgireesh/Programming/k8/staticVol
