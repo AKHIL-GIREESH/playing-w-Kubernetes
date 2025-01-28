@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testAppDeployment
+  labels:
+    app: testApp
+    pod: testAppPod
+spec:
+  selector:
+    matchLabels:
+      app: testApp
+  replicas: 3
+  template:
+    metadata:
+      name: testAppPod
+      labels:
+        app: testApp
+        about: expressServer
+    spec:
+      containers:
+        - name: testApp
+          image: akhilgireesh/exp-env-server
+          ports:
+            - containerPort: 3000
