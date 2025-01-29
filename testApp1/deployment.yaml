@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: testapp
-          image: akhilgireesh/exp-env-server
+          image: akhilgireesh/expressfork8
           ports:
             - containerPort: 3000
